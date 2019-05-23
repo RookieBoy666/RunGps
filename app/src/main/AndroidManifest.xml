@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bravo.rungps">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 计歩 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEM"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+
+    <application
+        android:name=".orbit.ui.base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+
+        <!-- //配置应用的AppKey,唯一的，需申请 -->
+        <!-- //service组件，固定配置 -->
+        <!-- 百度地图开始 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="1plh1owMdr2tvIsnSUlKUFGGxKMMdbUG" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 百度地图结束 -->
+
+        <activity android:name=".activity.WelcomeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.Login"></activity>
+        <activity
+            android:name=".activity.SetPlanActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activity.HistoryActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activity.User"
+            android:label="个人中心" />
+        <activity
+            android:name=".activity.Register"
+            android:label="用户注册" />
+        <activity
+            android:name=".activity.Resetpwd"
+            android:label="密码修改" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="乐动"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.SelfLocationActivity"
+            android:label="我的位置" />
+        <activity
+            android:name=".activity.SearchLocationActivity"
+            android:label="查找位置" />
+
+        <!-- 百度导航需要申明的一个服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name=".step.service.StepService"
+            android:priority="1000">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".pedometer.StepsDetectService"
+            android:priority="1000"
+            android:process="cn.bluemobi.dylan.step..pedometer.StepsDetectService">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".orbit.services.WorkService"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- <service android:name=".orbit.services.WorkService.WorkNotificationService" /> -->
+        <activity android:name=".orbit.OrbitMainActivity" />
+        <activity android:name=".orbit.ui.base.BaseActivity" />
+        <activity android:name=".activity.OrbitLocationActivity" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="关于" />
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:label="个人信息" />
+        <activity android:name=".activity.EditUserInfoActivity"
+            android:label="编辑信息" ></activity>
+
+
+
+        <activity
+            android:name="com.bravo.rungps.activity.StepCounterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.bravo.rungps.run.SettingsActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.bravo.rungps.run.StepCounterService" />
+
+
+
+
+
+    </application>
+
+</manifest>

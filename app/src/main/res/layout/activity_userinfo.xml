@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.UserInfoActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/main_geren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="个人信息"
+            android:textColor="#000"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl"
+        android:background="#000" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!--<TextView-->
+            <!--android:id="@+id/textView2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="头像"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="20sp" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_marginEnd="42dp"-->
+            <!--android:layout_marginRight="42dp"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBaseline="@+id/textView2"-->
+            <!--android:layout_alignBottom="@+id/textView2"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:text=">"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="30sp" />-->
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl1"
+        android:background="#000" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/main_textview_touxiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="用户名"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/userinfoname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/main_textview_touxiang"
+            android:layout_alignBottom="@+id/main_textview_touxiang"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="用户"
+            android:textColor="#000"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl2"
+        android:background="#000" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/main_textView_nicheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="性别"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/main_textView_nicheng"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="无"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+<!--下划线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl3"
+        android:background="#000" />
+
+<!--签名-->
+
+    <RelativeLayout
+        android:id="@+id/rl4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="签名"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/desc"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="无"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+    <!--下划线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl3"
+        android:background="#000" />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+
+            <!--<Button-->
+                <!--android:id="@+id/edituserinfo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="修改信息" />-->
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="showdialog"
+                android:text="注销账号" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:layout_marginTop="0dp">-->
+
+        <!--<LinearLayout-->
+
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="50dp"-->
+
+
+            <!--android:layout_marginStart="81dp"-->
+            <!--android:layout_marginLeft="81dp"-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--android:paddingTop="15dp">-->
+            <!--&lt;!&ndash;用户昵称&ndash;&gt;-->
+            <!--<TextView-->
+                <!--android:id="@+id/userinfopic"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginTop="0dp"-->
+                <!--android:drawableLeft="@android:drawable/ic_menu_myplaces" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/userinfoname"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginTop="10dp"-->
+
+                <!--android:text="dsddvdvv" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginLeft="-150dp"-->
+            <!--android:layout_marginTop="60dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/userinfopsexpic"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginTop="0dp"-->
+                <!--android:drawableLeft="@android:drawable/ic_menu_myplaces" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/userinfosex"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginTop="10dp"-->
+
+                <!--android:text="dsddvdvv" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginLeft="-150dp"-->
+            <!--android:layout_marginTop="110dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/userinfopagepic"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginTop="0dp"-->
+                <!--android:drawableLeft="@android:drawable/ic_menu_myplaces" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/userinfoage"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginTop="10dp"-->
+
+                <!--android:text="dsddvdvv" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    <!--<Button-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginStart="115dp"-->
+        <!--android:layout_marginLeft="115dp"-->
+        <!--android:layout_marginBottom="2dp"-->
+        <!--android:text="修改信息" />-->
+</LinearLayout>

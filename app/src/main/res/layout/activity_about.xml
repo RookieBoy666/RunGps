@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AboutActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+
+
+        android:height="30dp"
+        android:orientation="horizontal"
+        android:text="@string/version" />
+
+    <TextView
+        android:id="@+id/design"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="144dp"
+
+
+        android:height="30dp"
+        android:orientation="horizontal"
+        android:text="@string/design" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="207dp"
+        android:text="运动数据检测平台乐动APP主要是由一个具有GPS、计步等传感器的移动智能设备（手机）和乐动APP安卓应用程序组成。通过运动的数据采集、分析、存储、展示，为用户个人运动提供参考意见和反馈信息，达到科学健康运动、鼓励运动锻炼的目的。此外，移动社交的兴起，人们渴望信息的分享与交流，乐动APP提供数据的分享，让人们在日常生活中社交、运动两不误，从而提升用户黏性。" />
+
+
+</RelativeLayout>
