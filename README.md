@@ -7,20 +7,16 @@ LocationClient找不到类  百度地图下载不全3
 处理百度地图开源项目的定位偏差4
 侧边栏点击事件：在user.Java  视图在menu_layout4
 //获取登录信息4
+尚未完成：
 添加天气信息4
 二维码功能4
 指纹识别5
 定位分享5
 闹钟功能5
-注销时弹出框5
+
 UserData6
 账号登录后下次自动登录的问题（获取用户名）6
 
-
-1.
- 
-2.  
-3.  
 
  
 点击enter在user里
@@ -68,17 +64,6 @@ User.java(获取)
 UserInfoActivity接收
 
 添加天气信息
-
-http://down.admin5.com/android/139135.html
-http://down.admin5.com/android/138936.html
-二维码功能
-http://down.admin5.com/android/138936.html
-指纹识别
-
-定位分享
-http://down.admin5.com/android/133604.html
-闹钟功能
-http://down.admin5.com/android/132835.html
 
 注销时弹出框
 在UserInfoActivity中
